@@ -77,7 +77,7 @@ K=bf.filter(r=>r.k=='Strikeout').length,c=x=>bf.filter(r=>r.r==x).length,s1=c('S
 tb=s1+2*d+3*t+4*h,obp=(ab+BB+HB)?(H+BB+HB)/(ab+BB+HB):0,slg=ab?tb/ab:0,bip=rows.filter(r=>r.ev!=null&&r.c!='FoulBallNotFieldable'),ev=bip.map(r=>r.ev),
 sw=rows.filter(r=>SWG.includes(r.c)).length,loc=rows.filter(r=>r.ps!=null),hh=(x)=>bip.filter(r=>r.h==x).length;
 return{pa:bf.length,ab,H,d,t,h,BB,K,kp:100*K/(bf.length||1),bp:100*BB/(bf.length||1),avg:ab?H/ab:0,obp,slg,ops:obp+slg,bip:bip.length,ev:+av(ev)||0,mxev:+mx(ev)||0,
-hh:100*ev.filter(x=>x>=95).length/(ev.length||1),la:+av(nums(bip.map(r=>r.la)))||0,gb:100*hh('GroundBall')/(bip.length||1),ld:100*hh('LineDrive')/(bip.length||1),fb:100*(hh('FlyBall')+hh('Popup'))/(bip.length||1),
+hh:100*ev.filter(x=>x>=90).length/(ev.length||1),la:+av(nums(bip.map(r=>r.la)))||0,gb:100*hh('GroundBall')/(bip.length||1),ld:100*hh('LineDrive')/(bip.length||1),fb:100*(hh('FlyBall')+hh('Popup'))/(bip.length||1),
 wh:100*rows.filter(r=>r.c=='StrikeSwinging').length/(sw||1),ch:100*loc.filter(r=>!inZ(r)&&SWG.includes(r.c)).length/(loc.filter(r=>!inZ(r)).length||1)}}
 const f1=x=>x.toFixed(1),p1=x=>x.toFixed(1)+'%',f3=x=>x.toFixed(3).replace(/^0/,'');
 function table(title,cols,rows,id){const s=sort[id]||{k:cols[1][0],d:-1};
